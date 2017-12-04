@@ -8,6 +8,7 @@ public class TopologicalSort {
 	private int vertices;
 	private List<Integer> result;
 
+	@SuppressWarnings("unchecked")
 	public TopologicalSort(int vertices) {
 		this.vertices = vertices;
 		adjList = new ArrayList[vertices + 1];
