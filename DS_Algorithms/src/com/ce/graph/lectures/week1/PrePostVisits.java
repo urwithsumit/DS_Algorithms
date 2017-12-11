@@ -39,6 +39,7 @@ public class PrePostVisits {
 		return cc;
 	}
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int n = scanner.nextInt();
@@ -52,6 +53,7 @@ public class PrePostVisits {
 		for (int i = 0; i < n; i++) {
 			adj[i] = new ArrayList<Integer>();
 		}
+
 		for (int i = 0; i < m; i++) {
 			int x, y;
 			x = scanner.nextInt();
@@ -59,9 +61,11 @@ public class PrePostVisits {
 			adj[x - 1].add(y - 1);
 			adj[y - 1].add(x - 1);
 		}
-		System.out.println(numberOfComponents(adj));
 
-		System.out.println(Arrays.toString(preVisit));
-		System.out.println(Arrays.toString(postVisit));
+		scanner.close();
+
+		System.out.println("No. Of Component: " + numberOfComponents(adj));
+		System.out.println("Pre Visit Clock: " + Arrays.toString(preVisit));
+		System.out.println("Post Visit Clock: " + Arrays.toString(postVisit));
 	}
 }
