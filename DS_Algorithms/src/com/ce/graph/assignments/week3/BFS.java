@@ -44,13 +44,16 @@ public class BFS {
 	 */
 	private static String reconstructPath(int s, int u) {
 		StringBuilder revPath = new StringBuilder();
-
-		while (u != s) {
+		if (u == s) {
 			revPath.append(u + 1).append(" ");
-			u = prev[u];
-
-			if (u == s) {
+		} else {
+			while (u != s) {
 				revPath.append(u + 1).append(" ");
+				u = prev[u];
+
+				if (u == s) {
+					revPath.append(u + 1).append(" ");
+				}
 			}
 		}
 
