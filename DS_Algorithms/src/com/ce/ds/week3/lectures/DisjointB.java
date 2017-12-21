@@ -57,6 +57,7 @@ public class DisjointB {
 
 	private void makeSet(int i) {
 		array[i] = i;
+		rank[i] = 1;
 	}
 
 	private int smallestSetElement(int parent) {
@@ -70,8 +71,9 @@ public class DisjointB {
 	}
 
 	/**
-	 * Assume that the disjoint sets data structure is implemented as an array 𝚜𝚖𝚊𝚕𝚕𝚎𝚜𝚝[1…12]:
-	 * 𝚜𝚖𝚊𝚕𝚕𝚎𝚜𝚝[i] is equal to the smallest element in the set containing i.
+	 * Assume that the disjoint sets data structure is implemented as an array
+	 * 𝚜𝚖𝚊𝚕𝚕𝚎𝚜𝚝[1…12]: 𝚜𝚖𝚊𝚕𝚕𝚎𝚜𝚝[i] is equal to the smallest element
+	 * in the set containing i.
 	 * 
 	 * What is the output of the following program.
 	 */
@@ -107,9 +109,11 @@ public class DisjointB {
 	}
 
 	/**
-	 * Assume that the disjoint sets data structure is implemented as disjoint trees with union by rank heuristic.
+	 * Assume that the disjoint sets data structure is implemented as disjoint trees
+	 * with union by rank heuristic.
 	 * 
-	 * Compute the product of the heights of the resulting trees after executing the code
+	 * Compute the product of the heights of the resulting trees after executing the
+	 * code
 	 */
 	static void quizQ2() {
 
@@ -135,11 +139,13 @@ public class DisjointB {
 	}
 
 	/**
-	 * Assume that the disjoint sets data structure is implemented as disjoint trees with union by rank heuristic.
+	 * Assume that the disjoint sets data structure is implemented as disjoint trees
+	 * with union by rank heuristic.
 	 * 
-	 * What is the number of trees in the forest and the maximum height of a tree in this forest after executing this
-	 * code? (Recall that the height of a tree is the number of edges on a longest path from the root to a leaf. In
-	 * particular, the height of a tree consisting of just one node is equal to 0.)
+	 * What is the number of trees in the forest and the maximum height of a tree in
+	 * this forest after executing this code? (Recall that the height of a tree is
+	 * the number of edges on a longest path from the root to a leaf. In particular,
+	 * the height of a tree consisting of just one node is equal to 0.)
 	 */
 	static void quizQ3() {
 
@@ -158,8 +164,8 @@ public class DisjointB {
 	}
 
 	/**
-	 * Assume that the disjoint sets data structure is implemented as disjoint trees with union by rank heuristic and
-	 * with path compression heuristic.
+	 * Assume that the disjoint sets data structure is implemented as disjoint trees
+	 * with union by rank heuristic and with path compression heuristic.
 	 * 
 	 * Compute the maximum height of a tree in the resulting forest.
 	 */
